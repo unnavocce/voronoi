@@ -19,13 +19,12 @@ for i in range(amount_of_points):
 
 print(points)
 
-for point in points:
-    print(point)
-    print(points[point])
-    print(00000)
+for i, point in enumerate(points):
+    print("now y", points[point])
+    if i - 1 >= 0:
+        print("prev y", list(points.values())[int(i-1)])
 
-
-while running:
+"""while running:
     clock.tick(config.FPS)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -35,7 +34,6 @@ while running:
         present_point = (point, points[point])
         last_point = 0
         screen.set_at(present_point, config.RED)
-
-    pygame.display.flip()
+    pygame.display.flip()"""
 
 pygame.quit()
